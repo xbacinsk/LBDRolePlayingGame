@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestLineMKA3">
+
+    <TextView
+        android:id="@+id/textViewFragmentMKA3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What? 3 words.\nThird:"
+        android:textSize="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/textViewLegenda3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewFragmentMKA3"
+        android:scaleType="centerInside"
+        android:src="@drawable/krizovka1" />
+
+    <TextView
+        android:id="@+id/textViewLegenda3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Blah\n2. Sec\n3. Eeee\n4. Hlakjf\n5. Jksfn\n6.\n7.\n8."
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonToNQPMKA3" />
+
+    <Button
+        android:id="@+id/buttonToNQPMKA3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next page in this Quest Line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="100dp"
+        android:onClick="goToNextQuestPageMKA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

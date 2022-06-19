@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryPage9">
+
+    <TextView
+        android:id="@+id/myTextViewSP901"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Máme ale trochu zviazané ruky a nie je možné, aby sme si kľúče vyzdvihli sami. A tu prichádza rada na teba, Andris. Ja ti poviem moju indíciu. LBD bývajúca tam a tam ti dá svoju, keď sa za ňou zastavíš. Podobne MKA. MM žije ďaleko odtiaľto, ale občas chodieva navštíviť sestru bývajúcu tam a tam. Keď sa poponáhľaš, stretneš ju tam. O JK ale bohužiaľ už dlho nič nevieme. Predpokladáme, že už pravdepodobne ani nežije. Ale to, že nevieme jeho indíciu, sa porieši potom. Nemá zmysel sa nad tým pozastavovať, kým nemáme tie kľúče, o ktorých vieme."
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/myTextViewSP902"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/myTextViewSP902"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Indície a vodítka sme si spravili každý po svojom. Ja mám sériu fotiek, podľa ktorých sa dá dostať na hľadané miesto. U LBD očakávam nejaké šifry. A ako poznám JK, ten sa na to vykašľal a iba svoj kľúč ukryl v dome, kde kedysi býval, alebo v parku pri ňom."
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myTextViewSP901"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next page"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="goToNextPage"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

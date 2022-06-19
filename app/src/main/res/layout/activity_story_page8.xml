@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryPage8">
+
+    <TextView
+        android:id="@+id/myTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vitaj. Poviem ti príbeh.  Boli sme šiesti, spolu študovali, riešili šifry a postupne odhaľovali tajomstvá sveta, tie viac aj tie menej prirodzené. Začali sme si hovoriť 'šestka'. Pri svojich spoločných potulkách sme objavili niečo, o čom sa nám mohlo dovtedy iba snívať. Vzorku čistej upírej krvi. Podarilo sa nám syntetizovať enzým, ktorý sme si, vo svojej mladickej dychtivosti, všetci striekli do žíl. Na každého z nás zaposobil mierne odlišne. Základ sa ale nemení, všetkým nám dodal neskutčnú imunitu voči akýmkoľvek chorobám. A vlastne aj voči starnutiu.
+Vedeli sme, že nájdenú vzorku nemožeme nechať len tak niekde ležať, dokázala by sposobiť pohromu. A tak sme ju veľmi pečlivo ukryli a zamkli piatimi kľúčmi. Ešte aj tie kľúče sme schovali na roznych miestach a sami sa primäli zabudnúť, kde presne. Vyrobili sme si ale vodítka, aby sme sa ku nim v prípade nutnosti dostať dokázali. Každý vie iba svoje vlastné indície, ostatné nepozná.
+No a v tejto dobe, pri tom, čo sa už dlho deje a ešte dlho diať bude, sme sa zhodli na tom, že je načase trochu pomocť, keďže tú možnosť  máme."
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonNextSP8"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/buttonNextSP8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next page"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="goToNextPage"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

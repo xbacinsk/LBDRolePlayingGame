@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryPage10">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutSP10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonInventory"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMKA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMMM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showQuestLineMMM"
+        android:text="MMM"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLBD"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLBD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showQuestLineLBD"
+        android:text="LBD"
+        app:layout_constraintEnd_toStartOf="@+id/buttonKK"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMMM"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonKK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showQuestLineKK"
+        android:text="KK"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonLBD"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showQuestLineMM"
+        android:text="MM"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMKA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMMM" />
+
+    <Button
+        android:id="@+id/buttonMKA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showQuestLineMKA"
+        android:text="MKA"
+        app:layout_constraintEnd_toStartOf="@+id/buttonJK"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMM"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLBD" />
+
+    <Button
+        android:id="@+id/buttonJK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showQuestLineJK"
+        android:text="JK"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMKA"
+        app:layout_constraintTop_toBottomOf="@+id/buttonKK" />
+
+    <Button
+        android:id="@+id/buttonInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showInventory"
+        android:text="Inventory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

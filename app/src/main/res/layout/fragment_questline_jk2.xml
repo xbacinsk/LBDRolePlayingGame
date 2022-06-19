@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestLineJK2">
+
+    <TextView
+        android:id="@+id/textViewFragmentJK2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Našiel papier s notami. Úloha je zahrať tú melódiu a poslať nám video ako dokaz, že je na správnom mieste. Za odmenu od nás dostane kód pre pokračovanie.\n[kod je zatial abcd1234]"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@id/codeEditTextField"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/codeEditTextField"
+        android:inputType="text"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewFragmentJK2"
+        android:layout_marginTop="120dp"
+        android:shadowColor="@color/black"
+        android:hint="Code"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit code"
+        app:layout_constraintTop_toBottomOf="@id/codeEditTextField"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="checkCodeAndGoToNextQuestPageJK"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

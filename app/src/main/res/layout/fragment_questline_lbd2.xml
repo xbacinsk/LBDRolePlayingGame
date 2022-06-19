@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestLineLBD2">
+
+    <TextView
+        android:id="@+id/myTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pesimista vidí tmavy tunel. Optimista vidí svetlo na konci tunelu. Čo vidí realista?"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/myTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[Stlač tlačítka v správnom poradí.]"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myTextView1"
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/buttonStartOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start over"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myTextView2"
+        android:layout_marginTop="10dp"
+        android:onClick="startOver"
+        />
+
+    />
+
+    <Button
+        android:id="@+id/buttonLightBlue"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Light blue"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonDarkBlue"
+        app:layout_constraintTop_toBottomOf="@id/buttonStartOver"
+        android:layout_marginTop="20dp"
+        android:onClick="lightBlueButtonAction"
+        />
+
+    <Button
+        android:id="@+id/buttonDarkBlue"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Dark blue"
+        app:layout_constraintLeft_toRightOf="@id/buttonLightBlue"
+        app:layout_constraintRight_toLeftOf="@id/buttonGreen"
+        app:layout_constraintTop_toBottomOf="@id/buttonStartOver"
+        android:layout_marginTop="20dp"
+        android:onClick="darkBlueButtonAction"
+         />
+
+    <Button
+        android:id="@+id/buttonGreen"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Green"
+        app:layout_constraintLeft_toRightOf="@id/buttonDarkBlue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonStartOver"
+        android:layout_marginTop="20dp"
+        android:onClick="greenButtonAction"
+        />
+
+    <Button
+        android:id="@+id/buttonYellow"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Yellow"
+        app:layout_constraintLeft_toRightOf="@id/buttonOrange"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonGreen"
+        app:layout_constraintBottom_toTopOf="@id/buttonPink"
+        android:onClick="yellowButtonAction"
+        />
+
+    <Button
+        android:id="@+id/buttonOrange"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Orange"
+        app:layout_constraintLeft_toRightOf="@id/buttonRed"
+        app:layout_constraintRight_toLeftOf="@id/buttonYellow"
+        app:layout_constraintTop_toBottomOf="@id/buttonDarkBlue"
+        app:layout_constraintBottom_toTopOf="@id/buttonPink"
+        android:onClick="orangeButtonAction"
+        />
+
+    <Button
+        android:id="@+id/buttonRed"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Red"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonOrange"
+        app:layout_constraintTop_toBottomOf="@id/buttonLightBlue"
+        app:layout_constraintBottom_toTopOf="@id/buttonPink"
+        android:onClick="redButtonAction"
+        />
+
+    <Button
+        android:id="@+id/buttonPink"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Pink"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonOrange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="pinkButtonAction"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
