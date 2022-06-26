@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestLineLBD6">
+
+    <TextView
+        android:id="@+id/textViewFragmentLBD6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No, ano. Môj sprievodca si vzal krížik a začínal. A napriek tomu prehral. Tak sa trochu nahneval a nadurdene vybral na (nie najbližšiu) zastávku šaliny. Takmer som ho nedobehla, pretože práve išla jedna šalina opačným smerom. Ale, vodič ma, našťastie, počkal. Vnútri som môjho spoločníka ukecala, aby vystúpil o tri zastávky ďalej a vybil zlosť na workoutovom ihrisku.\nNo a tu som objavila skvelé miesto pre ukrytie môjho kľúča. Pomedzi dieru v kríkoch bolo totiž vidieť príhodný nápis: 'máš celej zbytek života před sebou'\n[pre variantu plus v kruzku pridat jednu ulohu]"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

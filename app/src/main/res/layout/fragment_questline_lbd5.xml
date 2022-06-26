@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestLineLBD5">
+
+    <TextView
+        android:id="@+id/textViewFragmentLBD5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ďalej po hlavnej ceste a .-- -.- --. ... A odpovedz na otázku: 'Kto vyhral hru na strieške?'"
+        android:textSize="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/morseAnswerEditTextFieldLBD" />
+
+    <EditText
+        android:id="@+id/morseAnswerEditTextFieldLBD"
+        android:inputType="text"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewFragmentLBD5"
+        app:layout_constraintBottom_toTopOf="@id/buttonToNQ5LBD"
+        android:shadowColor="@color/black"
+        android:hint="Answer"
+        />
+
+    <Button
+        android:id="@+id/buttonToNQ5LBD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/morseAnswerEditTextFieldLBD"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="checkMorseAnswerTextFieldAndGoToNextQuestPageLBD"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

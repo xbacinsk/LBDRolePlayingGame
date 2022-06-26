@@ -10,7 +10,7 @@
         android:id="@+id/myTextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pesimista vidí tmavy tunel. Optimista vidí svetlo na konci tunelu. Čo vidí realista?"
+        android:text="Začneme hádankou: Pesimista vidí tmavy tunel. Optimista vidí svetlo na konci tunelu. Čo vidí realista?"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"

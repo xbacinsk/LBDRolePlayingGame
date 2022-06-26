@@ -17,7 +17,7 @@ No a v tejto dobe, pri tom, čo sa už dlho deje a ešte dlho diať bude, sme sa
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/buttonNextSP8"
-        android:textSize="20dp"
+        android:textSize="15dp"
         />
 
     <Button

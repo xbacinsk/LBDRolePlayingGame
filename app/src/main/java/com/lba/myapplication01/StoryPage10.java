@@ -1,6 +1,5 @@
 package com.lba.myapplication01;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -10,9 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class StoryPage10 extends AppCompatActivity {
 
@@ -22,6 +20,8 @@ public class StoryPage10 extends AppCompatActivity {
     final String itemCodeKeyMM  = "mm123";
     final String itemCodeKeyMKA = "mka123";
     final String itemCodeKeyJK  = "jk123";
+
+    final String tsNumber  = "689";
 
     private List<Fragment> activeQuestsMMM = new ArrayList<>();
     private Fragment activeQuestPageMMM;
@@ -59,40 +59,37 @@ public class StoryPage10 extends AppCompatActivity {
         activeQuestsMMM.add(QuestLineMMM5.newInstance());
         activeQuestsMMM.add(QuestLineMMM6.newInstance());
         activeQuestsMMM.add(QuestLineMMM7.newInstance());
-        activeQuestsMMM.add(QuestLineLast.newInstance());
-        activeQuestPageMMM = QuestLineMMM1.newInstance();
+        activeQuestPageMMM = activeQuestsMMM.get(0);
 
         activeQuestsLBD.add(QuestLineLBD0.newInstance());
         activeQuestsLBD.add(QuestLineLBD1.newInstance());
         activeQuestsLBD.add(QuestLineLBD2.newInstance());
         activeQuestsLBD.add(QuestLineLBD3.newInstance());
         activeQuestsLBD.add(QuestLineLBD4.newInstance());
-        activeQuestsLBD.add(QuestLineLast.newInstance());
-        activeQuestPageLBD = QuestLineLBD0.newInstance();
+        activeQuestsLBD.add(QuestLineLBD5.newInstance());
+        activeQuestsLBD.add(QuestLineLBD6.newInstance());
+        activeQuestPageLBD = activeQuestsLBD.get(0);
 
         activeQuestsKK.add(QuestLineKK1.newInstance());
         activeQuestsKK.add(QuestLineKK2.newInstance());
         activeQuestsKK.add(QuestLineKK3.newInstance());
-        activeQuestsKK.add(QuestLineLast.newInstance());
-        activeQuestPageKK = QuestLineKK1.newInstance();
+        activeQuestPageKK = activeQuestsKK.get(0);
 
         activeQuestsMM.add(QuestLineMM1.newInstance());
         activeQuestsMM.add(QuestLineLast.newInstance());
-        activeQuestPageMM = QuestLineMM1.newInstance();
+        activeQuestPageMM = activeQuestsMM.get(0);
 
         activeQuestsMKA.add(QuestLineMKA1.newInstance());
         activeQuestsMKA.add(QuestLineMKA2.newInstance());
         activeQuestsMKA.add(QuestLineMKA3.newInstance());
-        activeQuestsMKA.add(QuestLineLast.newInstance());
-        activeQuestPageMKA = QuestLineMKA1.newInstance();
+        activeQuestPageMKA = activeQuestsMKA.get(0);
 
         activeQuestsJK.add(QuestLineJK1.newInstance());
         activeQuestsJK.add(QuestLineJK2.newInstance());
         activeQuestsJK.add(QuestLineJK3.newInstance());
-        activeQuestsJK.add(QuestLineLast.newInstance());
-        activeQuestPageJK = QuestLineJK1.newInstance();
+        activeQuestPageJK = activeQuestsJK.get(0);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutSP10, QuestLineMMM1.newInstance()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutSP10, Rozcestnik.newInstance()).commit();
     }
 
     public void showInventory(View view) {
@@ -105,22 +102,7 @@ public class StoryPage10 extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageMMM).commit();
     }
 
-    public void goToNextQuestPageMMM(View view) {
-        iteratorActiveQuestPageMMM++;
-        if(iteratorActiveQuestPageMMM == 7) {
-            iteratorActiveQuestPageMMM = 1;
-        }
-        activeQuestPageMMM = activeQuestsMMM.get(iteratorActiveQuestPageMMM);
-        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageMMM).commit();
-    }
-
     public void showQuestLineLBD(View view) {
-        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageLBD).commit();
-    }
-
-    public void goToNextQuestPageLBD(View view) {
-        iteratorActiveQuestPageLBD++;
-        activeQuestPageLBD = activeQuestsLBD.get(iteratorActiveQuestPageLBD);
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageLBD).commit();
     }
 
@@ -128,19 +110,7 @@ public class StoryPage10 extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageKK).commit();
     }
 
-    public void goToNextQuestPageKK(View view) {
-        iteratorActiveQuestPageKK++;
-        activeQuestPageKK = activeQuestsKK.get(iteratorActiveQuestPageKK);
-        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageKK).commit();
-    }
-
     public void showQuestLineMM(View view) {
-        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageMM).commit();
-    }
-
-    public void goToNextQuestPageMM(View view) {
-        iteratorActiveQuestPageMM++;
-        activeQuestPageMM = activeQuestsMM.get(iteratorActiveQuestPageMM);
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageMM).commit();
     }
 
@@ -148,33 +118,42 @@ public class StoryPage10 extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageMKA).commit();
     }
 
-    public void goToNextQuestPageMKA(View view) {
-        iteratorActiveQuestPageMKA++;
-        if(iteratorActiveQuestPageMKA == 3) {
-            iteratorActiveQuestPageMKA = 0;
-        }
-        activeQuestPageMKA = activeQuestsMKA.get(iteratorActiveQuestPageMKA);
-        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageMKA).commit();
-    }
-
     public void showQuestLineJK(View view) {
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageJK).commit();
     }
 
-    public void goToNextQuestPageJK(View view) {
-        iteratorActiveQuestPageJK++;
-        activeQuestPageJK = activeQuestsJK.get(iteratorActiveQuestPageJK);
-        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, activeQuestPageJK).commit();
-    }
-
-    public void endForNow(View view) {
-    }
-
     //-----end-----show proper quest line-----
 
+    //-----begin-----MMM-----
 
+    public void updateQuestLineMMM(View view) {
+        showQuestLineMMM(view);
+    }
+
+    public void goToNextQuestPageMMM(View view) {
+        iteratorActiveQuestPageMMM++;
+        if(iteratorActiveQuestPageMMM == activeQuestsMMM.size()) {
+            iteratorActiveQuestPageMMM = 1;
+        }
+        activeQuestPageMMM = activeQuestsMMM.get(iteratorActiveQuestPageMMM);
+        updateQuestLineMMM(view);
+    }
+
+    //-----end-----MMM-----
 
     //-----begin-----LBD quest line-----
+
+    public void updateQuestLineLBD(View view) {
+        showQuestLineLBD(view);
+    }
+
+    public void goToNextQuestPageLBD(View view) {
+        iteratorActiveQuestPageLBD++;
+        activeQuestPageLBD = activeQuestsLBD.get(iteratorActiveQuestPageLBD);
+        updateQuestLineLBD(view);
+    }
+
+    //-----begin-----hriste-----
 
     private int counter = 0;
 
@@ -217,10 +196,102 @@ public class StoryPage10 extends AppCompatActivity {
         else counter = 0;
     }
 
+    //-----end-----hriste-----
+
+    //-----begin-----zastavka
+
+    public void checkTextFieldsAndGoToNextQuestPageLBD(View view) {
+        final EditText stairsTextField01 = (EditText) findViewById(R.id.stairsEditTextFieldLBD1);
+        final EditText stairsTextField02 = (EditText) findViewById(R.id.stairsEditTextFieldLBD2);
+        final EditText stairsTextField03 = (EditText) findViewById(R.id.stairsEditTextFieldLBD3);
+        if (stairsTextField01.getText().toString().equals("15") && stairsTextField02.getText().toString().equals("16") && stairsTextField03.getText().toString().equals("16") ) {
+            goToNextQuestPageLBD(view);
+        }
+    }
+
+    //-----end-----zastavka-----
+
+    //-----begin-----TS-----
+
+    public void checkTsNumberTextFieldAndGoToNextQuestPageLBD(View view) {
+        final EditText tsNumberTextField = (EditText) findViewById(R.id.tsNumberEditTextFieldLBD);
+        if (tsNumberTextField.getText().toString().equals(tsNumber)) {
+            goToNextQuestPageLBD(view);
+        }
+    }
+
+    //-----end-----TS-----
+
+    //-----begin-----Morse-----
+
+    public void checkMorseAnswerTextFieldAndGoToNextQuestPageLBD(View view) {
+        final EditText morseAnswerTextField = (EditText) findViewById(R.id.morseAnswerEditTextFieldLBD);
+        final List<String> possibleMorseAnswers = Arrays.asList("lbd", "kruzok", "krúžok", "krouzek", "kroužek", "kolecko", "kolečko", "o", "koliecko", "koliečko", "koliesko", "circle");
+        if (possibleMorseAnswers.contains(morseAnswerTextField.getText().toString().toLowerCase())) {
+            goToNextQuestPageLBD(view);
+        }
+    }
+
+    //-----end-----Morse-----
+
     //-----end-----LBD quest line-----
 
+    //-----begin-----KK-----
+
+    public void updateQuestLineKK(View view) {
+        showQuestLineKK(view);
+    }
+
+    public void goToNextQuestPageKK(View view) {
+        iteratorActiveQuestPageKK++;
+        activeQuestPageKK = activeQuestsKK.get(iteratorActiveQuestPageKK);
+        updateQuestLineKK(view);
+    }
+
+    //-----end-----KK-----
+
+    //-----begin-----MM-----
+
+    public void updateQuestLineMM(View view) {
+        showQuestLineMM(view);
+    }
+
+    public void goToNextQuestPageMM(View view) {
+        iteratorActiveQuestPageMM++;
+        activeQuestPageMM = activeQuestsMM.get(iteratorActiveQuestPageMM);
+        updateQuestLineMM(view);
+    }
+
+    //-----end-----MM-----
+
+    //-----begin-----MKA-----
+
+    public void updateQuestLineMKA(View view) {
+        showQuestLineMKA(view);
+    }
+
+    public void goToNextQuestPageMKA(View view) {
+        iteratorActiveQuestPageMKA++;
+        if(iteratorActiveQuestPageMKA == activeQuestsMKA.size()) {
+            iteratorActiveQuestPageMKA = 0;
+        }
+        activeQuestPageMKA = activeQuestsMKA.get(iteratorActiveQuestPageMKA);
+        updateQuestLineMKA(view);
+    }
+
+    //-----end-----MKA-----
 
     //-----begin-----JK quest line-----
+
+    public void updateQuestLineJK(View view) {
+        showQuestLineJK(view);
+    }
+
+    public void goToNextQuestPageJK(View view) {
+        iteratorActiveQuestPageJK++;
+        activeQuestPageJK = activeQuestsJK.get(iteratorActiveQuestPageJK);
+        updateQuestLineJK(view);
+    }
 
     public void checkCodeAndGoToNextQuestPageJK(View view) {
         final EditText addItemTextField = (EditText) findViewById(R.id.codeEditTextField);
@@ -262,37 +333,39 @@ public class StoryPage10 extends AppCompatActivity {
     }
 
     public void useKeyMMM(View view) {
-        activeQuestPageMMM = activeQuestsMMM.get(activeQuestsMMM.size() - 1);
+        activeQuestPageMMM = QuestLineLast.newInstance();
         showQuestLineMMM(view);
     }
 
     public void useKeyLBD(View view) {
-        activeQuestPageLBD = activeQuestsLBD.get(activeQuestsLBD.size() - 1);
+        activeQuestPageLBD = QuestLineLast.newInstance();
         showQuestLineLBD(view);
     }
 
     public void useKeyKK(View view) {
-        activeQuestPageKK = activeQuestsKK.get(activeQuestsKK.size() - 1);
+        activeQuestPageKK = QuestLineLast.newInstance();
         showQuestLineKK(view);
     }
 
     public void useKeyMM(View view) {
-        activeQuestPageMM = activeQuestsMM.get(activeQuestsMM.size() - 1);
+        activeQuestPageMM = QuestLineLast.newInstance();
         showQuestLineMM(view);
     }
 
     public void useKeyMKA(View view) {
-        activeQuestPageMKA = activeQuestsMKA.get(activeQuestsMKA.size() - 1);
+        activeQuestPageMKA = QuestLineLast.newInstance();
         showQuestLineMKA(view);
     }
 
     public void useKeyJK(View view) {
-        activeQuestPageJK = activeQuestsJK.get(activeQuestsJK.size() - 1);
+        activeQuestPageJK = QuestLineLast.newInstance();
         showQuestLineJK(view);
     }
 
     //-----end-----Inventory-----
 
+    public void endForNow(View view) {
+    }
 }
 
 

@@ -10,13 +10,13 @@
         android:id="@+id/myTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LBD hladaj pri Semilasse, adresa Kosmova 4.\nTam bude listok s napisom 'Som na hristi, v surnom pripade ma tam najdete.' + mapa"
+        android:text="LBD hladaj pri Semilasse, adresa Kosmova 4.\nTam bude listok s napisom 'Som prec, v surnom pripade ma najdete podla mapy. Ak sa tam z nejakych dovodov neda dostat, budem asi na stejnojmennom mieste v Bohuniciach. Onedlho sa totiz planujeme stahovat na juh.' + mapa"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="10dp"
-        android:textSize="25dp"
+        android:textSize="20dp"
         />
 
     <Button
