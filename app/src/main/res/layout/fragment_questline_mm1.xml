@@ -7,11 +7,11 @@
     tools:context=".QuestLineMM1">
 
     <TextView
-        android:id="@+id/textViewFragmentMM"
+        android:id="@+id/textViewFragmentMM1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MM Quest Line 1"
-        android:textSize="50dp"
+        android:text="MMM: 'MM už v Brne nie je, ale jej sestra tu býva a niekedy ju navštevuje. Tá by mohla niečo bližšie vedieť. Ja viem len, že vždy veľmi rada cestovala. A mala rada mapy. Často si do nich niečo zakresľovala, napríklad rôzne symboly. Asi najradšej mala symbol z Moravského námestia.'"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

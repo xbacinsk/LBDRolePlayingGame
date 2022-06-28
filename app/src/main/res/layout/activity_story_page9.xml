@@ -22,7 +22,7 @@
         android:id="@+id/myTextViewSP902"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Indície a vodítka sme si spravili každý po svojom. Ja mám sériu fotiek, podľa ktorých sa dá dostať na hľadané miesto. U LBD očakávam nejaké šifry. A ako poznám JK, ten sa na to vykašľal a iba svoj kľúč ukryl v dome, kde kedysi býval, alebo v parku pri ňom."
+        android:text="Indície a vodítka sme si spravili každý po svojom. Ja mám sériu fotiek, podľa ktorých sa dá dostať na hľadané miesto. U LBD očakávam nejaké šifry. MKA mi poslala nejaké krížovky, KK zas niečo, čo mi znie ako citáty z nejakej knihy alebo filmu. A ako poznám JK, tá sa na to vykašľala a iba svoj kľúč ukryla v dome, kde kedysi bývala, alebo v parku pri ňom."
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myTextViewSP901"

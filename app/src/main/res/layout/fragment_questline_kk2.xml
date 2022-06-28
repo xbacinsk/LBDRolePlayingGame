@@ -10,7 +10,7 @@
         android:id="@+id/textViewFragmentKK2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AD: 'Len ten človek, ktorý chce ten predmet nájsť - nájsť, ale nepoužiť pre seba - má šancu ho získať.'"
+        android:text="AD: 'Ľudia za ním premárnili mnoho času. Dokonca zošaleli. A tak sa muselo presunúť na iné miesto.'"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

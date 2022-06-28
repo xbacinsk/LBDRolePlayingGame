@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuestLineKK1">
+    tools:context=".QuestLineMM3">
 
-    <TextView
-        android:id="@+id/textViewFragmentKK1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AD: 'Len ten človek, ktorý chce ten predmet nájsť - nájsť, ale nepoužiť pre seba - má šancu ho získať.'"
-        android:textSize="25dp"
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/mm3" />
 
     <Button
         android:layout_width="wrap_content"
@@ -24,6 +23,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="100dp"
-        android:onClick="goToNextQuestPageKK" />
+        android:onClick="goToNextQuestPageMM" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

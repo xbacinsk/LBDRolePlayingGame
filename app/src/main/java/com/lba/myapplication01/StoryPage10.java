@@ -244,6 +244,9 @@ public class StoryPage10 extends AppCompatActivity {
 
     public void goToNextQuestPageKK(View view) {
         iteratorActiveQuestPageKK++;
+        if(iteratorActiveQuestPageKK == activeQuestsKK.size()) {
+            iteratorActiveQuestPageKK = 1;
+        }
         activeQuestPageKK = activeQuestsKK.get(iteratorActiveQuestPageKK);
         updateQuestLineKK(view);
     }
@@ -258,6 +261,9 @@ public class StoryPage10 extends AppCompatActivity {
 
     public void goToNextQuestPageMM(View view) {
         iteratorActiveQuestPageMM++;
+        if(iteratorActiveQuestPageMM == activeQuestsMM.size()) {
+            iteratorActiveQuestPageMM = 1;
+        }
         activeQuestPageMM = activeQuestsMM.get(iteratorActiveQuestPageMM);
         updateQuestLineMM(view);
     }
