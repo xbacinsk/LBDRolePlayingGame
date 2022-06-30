@@ -83,7 +83,9 @@ public class StoryPage10 extends AppCompatActivity {
         activeQuestPageKK = activeQuestsKK.get(0);
 
         activeQuestsMM.add(QuestLineMM1.newInstance());
-        activeQuestsMM.add(QuestLineLast.newInstance());
+        activeQuestsMM.add(QuestLineMM2.newInstance());
+        activeQuestsMM.add(QuestLineMM3.newInstance());
+        activeQuestsMM.add(QuestLineMM4.newInstance());
         activeQuestPageMM = activeQuestsMM.get(0);
 
         activeQuestsMKA.add(QuestLineMKA1.newInstance());
