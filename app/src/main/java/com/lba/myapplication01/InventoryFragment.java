@@ -17,14 +17,20 @@ import androidx.fragment.app.Fragment;
  */
 public class InventoryFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    // the fragment initialization parameters
+    private static final String ITEM_VISIBILITY_KEY_MMM = "itemVisibilityKeyMMM";
+    private static final String ITEM_VISIBILITY_KEY_LBD = "itemVisibilityKeyLBD";
+    private static final String ITEM_VISIBILITY_KEY_KK = "itemVisibilityKeyKK";
+    private static final String ITEM_VISIBILITY_KEY_MM = "itemVisibilityKeyMM";
+    private static final String ITEM_VISIBILITY_KEY_MKA = "itemVisibilityKeyMKA";
+    private static final String ITEM_VISIBILITY_KEY_JK = "itemVisibilityKeyJK";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private int itemVisibilityKeyMMM;
+    private int itemVisibilityKeyLBD;
+    private int itemVisibilityKeyKK;
+    private int itemVisibilityKeyMM;
+    private int itemVisibilityKeyMKA;
+    private int itemVisibilityKeyJK;
 
     public InventoryFragment() {
         // Required empty public constructor
@@ -36,10 +42,15 @@ public class InventoryFragment extends Fragment {
      *
      * @return A new instance of fragment LBDFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static InventoryFragment newInstance() {
+    public static InventoryFragment newInstance(int argumentKeyMMM, int argumentKeyLBD, int argumentKeyKK, int argumentKeyMM, int argumentKeyMKA, int argumentKeyJK) {
         InventoryFragment fragment = new InventoryFragment();
         Bundle args = new Bundle();
+        args.putInt(ITEM_VISIBILITY_KEY_MMM, argumentKeyMMM);
+        args.putInt(ITEM_VISIBILITY_KEY_LBD, argumentKeyLBD);
+        args.putInt(ITEM_VISIBILITY_KEY_KK, argumentKeyKK);
+        args.putInt(ITEM_VISIBILITY_KEY_MM, argumentKeyMM);
+        args.putInt(ITEM_VISIBILITY_KEY_MKA, argumentKeyMKA);
+        args.putInt(ITEM_VISIBILITY_KEY_JK, argumentKeyJK);
         fragment.setArguments(args);
         return fragment;
     }
@@ -48,8 +59,12 @@ public class InventoryFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            itemVisibilityKeyMMM = getArguments().getInt(ITEM_VISIBILITY_KEY_MMM);
+            itemVisibilityKeyLBD = getArguments().getInt(ITEM_VISIBILITY_KEY_LBD);
+            itemVisibilityKeyKK = getArguments().getInt(ITEM_VISIBILITY_KEY_KK);
+            itemVisibilityKeyMM = getArguments().getInt(ITEM_VISIBILITY_KEY_MM);
+            itemVisibilityKeyMKA = getArguments().getInt(ITEM_VISIBILITY_KEY_MKA);
+            itemVisibilityKeyJK = getArguments().getInt(ITEM_VISIBILITY_KEY_JK);
         }
     }
 
@@ -57,7 +72,26 @@ public class InventoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inventory, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_inventory, container, false);
+        ImageView imageViewMMM = (ImageView) rootView.findViewById(R.id.keyMMM);
+        imageViewMMM.setVisibility(itemVisibilityKeyMMM);
+
+        ImageView imageViewLBD = (ImageView) rootView.findViewById(R.id.keyLBD);
+        imageViewLBD.setVisibility(itemVisibilityKeyLBD);
+
+        ImageView imageViewKK = (ImageView) rootView.findViewById(R.id.keyKK);
+        imageViewKK.setVisibility(itemVisibilityKeyKK);
+
+        ImageView imageViewMM = (ImageView) rootView.findViewById(R.id.keyMM);
+        imageViewMM.setVisibility(itemVisibilityKeyMM);
+
+        ImageView imageViewMKA = (ImageView) rootView.findViewById(R.id.keyMKA);
+        imageViewMKA.setVisibility(itemVisibilityKeyMKA);
+
+        ImageView imageViewJK = (ImageView) rootView.findViewById(R.id.keyJK);
+        imageViewJK.setVisibility(itemVisibilityKeyJK);
+
+        return rootView;
     }
 
 }

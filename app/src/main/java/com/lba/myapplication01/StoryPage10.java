@@ -21,6 +21,13 @@ public class StoryPage10 extends AppCompatActivity {
     final String itemCodeKeyMKA = "mka123";
     final String itemCodeKeyJK  = "jk123";
 
+    private int itemVisibilityKeyMMM = View.INVISIBLE;
+    private int itemVisibilityKeyLBD = View.INVISIBLE;
+    private int itemVisibilityKeyKK = View.INVISIBLE;
+    private int itemVisibilityKeyMM = View.INVISIBLE;
+    private int itemVisibilityKeyMKA = View.INVISIBLE;
+    private int itemVisibilityKeyJK = View.INVISIBLE;
+
     final String tsNumber  = "689";
 
     private List<Fragment> activeQuestsMMM = new ArrayList<>();
@@ -90,10 +97,6 @@ public class StoryPage10 extends AppCompatActivity {
         activeQuestPageJK = activeQuestsJK.get(0);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutSP10, Rozcestnik.newInstance()).commit();
-    }
-
-    public void showInventory(View view) {
-        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, InventoryFragment.newInstance()).commit();
     }
 
     //-----begin-----show proper quest line-----
@@ -310,31 +313,67 @@ public class StoryPage10 extends AppCompatActivity {
 
     //-----begin-----Inventory-----
 
+    public void showInventory(View view) {
+        InventoryFragment inventoryFragmentInstance = InventoryFragment.newInstance(itemVisibilityKeyMMM, itemVisibilityKeyLBD, itemVisibilityKeyKK, itemVisibilityKeyMM, itemVisibilityKeyMKA, itemVisibilityKeyJK);
+        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.frameLayoutSP10, inventoryFragmentInstance).commit();
+    }
+
+    private void setItemVisibilityKeyMMM(View view) {
+        final ImageView handleView = (ImageView) findViewById(R.id.keyMMM);
+        handleView.setVisibility(itemVisibilityKeyMMM);
+    }
+
+    private void setItemVisibilityKeyLBD(View view) {
+        final ImageView handleView = (ImageView) findViewById(R.id.keyLBD);
+        handleView.setVisibility(itemVisibilityKeyLBD);
+    }
+
+    private void setItemVisibilityKeyKK(View view) {
+        final ImageView handleView = (ImageView) findViewById(R.id.keyKK);
+        handleView.setVisibility(itemVisibilityKeyKK);
+    }
+
+    private void setItemVisibilityKeyMM(View view) {
+        final ImageView handleView = (ImageView) findViewById(R.id.keyMM);
+        handleView.setVisibility(itemVisibilityKeyMM);
+    }
+
+    private void setItemVisibilityKeyMKA(View view) {
+        final ImageView handleView = (ImageView) findViewById(R.id.keyMKA);
+        handleView.setVisibility(itemVisibilityKeyMKA);
+    }
+
+    private void setItemVisibilityKeyJK(View view) {
+        final ImageView handleView = (ImageView) findViewById(R.id.keyJK);
+        handleView.setVisibility(itemVisibilityKeyJK);
+    }
+
+
     public void addItemToInventory(View view) {
         final EditText addItemTextField = (EditText) findViewById(R.id.addItemTextField);
         if(addItemTextField.getText().toString().equals(itemCodeKeyMMM)) {
-            final ImageView handleView = (ImageView) findViewById(R.id.keyMMM);
-            handleView.setVisibility(view.VISIBLE);
+            itemVisibilityKeyMMM = view.VISIBLE;
+            setItemVisibilityKeyMMM(view);
         }
         else if(addItemTextField.getText().toString().equals(itemCodeKeyLBD)) {
-            final ImageView handleView = (ImageView) findViewById(R.id.keyLBD);
-            handleView.setVisibility(view.VISIBLE);
+            itemVisibilityKeyLBD = view.VISIBLE;
+            setItemVisibilityKeyLBD(view);
         }
         else if(addItemTextField.getText().toString().equals(itemCodeKeyKK)) {
-            final ImageView handleView = (ImageView) findViewById(R.id.keyKK);
-            handleView.setVisibility(view.VISIBLE);
+            itemVisibilityKeyKK = view.VISIBLE;
+            setItemVisibilityKeyKK(view);
         }
         else if(addItemTextField.getText().toString().equals(itemCodeKeyMM)) {
-            final ImageView handleView = (ImageView) findViewById(R.id.keyMM);
-            handleView.setVisibility(view.VISIBLE);
+            itemVisibilityKeyMM = view.VISIBLE;
+            setItemVisibilityKeyMM(view);
         }
         else if(addItemTextField.getText().toString().equals(itemCodeKeyMKA)) {
-            final ImageView handleView = (ImageView) findViewById(R.id.keyMKA);
-            handleView.setVisibility(view.VISIBLE);
+            itemVisibilityKeyMKA = view.VISIBLE;
+            setItemVisibilityKeyMKA(view);
         }
         else if(addItemTextField.getText().toString().equals(itemCodeKeyJK)) {
-            final ImageView handleView = (ImageView) findViewById(R.id.keyJK);
-            handleView.setVisibility(view.VISIBLE);
+            itemVisibilityKeyJK = view.VISIBLE;
+            setItemVisibilityKeyJK(view);
         }
     }
 
