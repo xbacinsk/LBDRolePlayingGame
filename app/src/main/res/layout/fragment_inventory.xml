@@ -74,7 +74,7 @@
         app:layout_constraintRight_toLeftOf="@id/keyMM"
         app:layout_constraintTop_toBottomOf="@id/keyMMM"
         app:layout_constraintBottom_toTopOf="@id/keyMKA"
-        android:src="@drawable/item_handle"
+        android:src="@drawable/item_box"
         android:onClick="useKeyKK"
         android:visibility="invisible"
         />
