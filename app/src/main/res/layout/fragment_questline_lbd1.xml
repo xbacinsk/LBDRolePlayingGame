@@ -7,6 +7,7 @@
     tools:context=".QuestLineLBD1">
 
     <ImageView
+        android:id="@+id/imageMapLBD"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/buttonConfirmPark"
@@ -15,6 +16,18 @@
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="centerInside"
         android:src="@drawable/s08" />
+
+    <TextView
+        android:id="@+id/myTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="'Som preč, v súrnom prípade ma nájdete podľa mapy. Ak sa tam z nejakých dôvodov nedá dostať, budem asi na stejnojmennom mieste v Bohuniciach. Onedlho sa totiž plánujeme sťahovať na juh.'"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageMapLBD"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
 
     <Button
         android:id="@+id/buttonConfirmPark"

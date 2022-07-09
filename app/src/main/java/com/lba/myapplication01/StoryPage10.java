@@ -28,7 +28,13 @@ public class StoryPage10 extends AppCompatActivity {
     private int itemVisibilityKeyMKA = View.INVISIBLE;
     private int itemVisibilityKeyJK = View.INVISIBLE;
 
+    final String ringKosmova = "Kosmova";
+    final String ringBea = "Bea";
+    final String ringKobka = "Kobka";
+
     final String tsNumber  = "689";
+    final List<String> possibleMorseAnswers = Arrays.asList("lbd", "kruzok", "krúžok", "krouzek", "kroužek", "kolecko", "kolečko", "o", "koliecko", "koliečko", "koliesko", "circle");
+    final String pianoCode = "abcd1234";
 
     private List<Fragment> activeQuestsMMM = new ArrayList<>();
     private Fragment activeQuestPageMMM;
@@ -158,6 +164,17 @@ public class StoryPage10 extends AppCompatActivity {
         updateQuestLineLBD(view);
     }
 
+    //-----begin-----ring-----
+
+    public void checkRingTextFieldAndGoToNextQuestPageLBD(View view) {
+        final EditText ringTextField = (EditText) findViewById(R.id.ringEditTextFieldLBD0);
+        if (ringTextField.getText().toString().equals(ringKosmova)) {
+            goToNextQuestPageLBD(view);
+        }
+    }
+
+    //-----end-----ring-----
+
     //-----begin-----hriste-----
 
     private int counter = 0;
@@ -231,7 +248,6 @@ public class StoryPage10 extends AppCompatActivity {
 
     public void checkMorseAnswerTextFieldAndGoToNextQuestPageLBD(View view) {
         final EditText morseAnswerTextField = (EditText) findViewById(R.id.morseAnswerEditTextFieldLBD);
-        final List<String> possibleMorseAnswers = Arrays.asList("lbd", "kruzok", "krúžok", "krouzek", "kroužek", "kolecko", "kolečko", "o", "koliecko", "koliečko", "koliesko", "circle");
         if (possibleMorseAnswers.contains(morseAnswerTextField.getText().toString().toLowerCase())) {
             goToNextQuestPageLBD(view);
         }
@@ -306,7 +322,7 @@ public class StoryPage10 extends AppCompatActivity {
 
     public void checkCodeAndGoToNextQuestPageJK(View view) {
         final EditText addItemTextField = (EditText) findViewById(R.id.codeEditTextField);
-        if (addItemTextField.getText().toString().equals("abcd1234")) {
+        if (addItemTextField.getText().toString().equals(pianoCode)) {
             goToNextQuestPageJK(view);
         }
     }
