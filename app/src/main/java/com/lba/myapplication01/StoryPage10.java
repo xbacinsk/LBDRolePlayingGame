@@ -28,9 +28,9 @@ public class StoryPage10 extends AppCompatActivity {
     private int itemVisibilityKeyMKA = View.INVISIBLE;
     private int itemVisibilityKeyJK = View.INVISIBLE;
 
-    final String ringKosmova = "Kosmova";
-    final String ringBea = "Bea";
-    final String ringKobka = "Kobka";
+    final String ringKosmova = "kosmova";
+    final String ringBea = "bea";
+    final String ringKobka = "kobka";
 
     final String tsNumber  = "689";
     final List<String> possibleMorseAnswers = Arrays.asList("lbd", "kruzok", "krúžok", "krouzek", "kroužek", "kolecko", "kolečko", "o", "koliecko", "koliečko", "koliesko", "circle");
@@ -168,7 +168,7 @@ public class StoryPage10 extends AppCompatActivity {
 
     public void checkRingTextFieldAndGoToNextQuestPageLBD(View view) {
         final EditText ringTextField = (EditText) findViewById(R.id.ringEditTextFieldLBD0);
-        if (ringTextField.getText().toString().equals(ringKosmova)) {
+        if (ringTextField.getText().toString().toLowerCase().equals(ringKosmova)) {
             goToNextQuestPageLBD(view);
         }
     }

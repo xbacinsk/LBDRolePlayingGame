@@ -28,7 +28,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewFragmentLBD0"
         android:shadowColor="@color/black"
-        android:hint="Number"
+        android:hint="Name"
         />
 
     <Button
