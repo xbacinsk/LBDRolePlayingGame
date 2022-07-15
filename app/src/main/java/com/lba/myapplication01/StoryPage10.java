@@ -28,9 +28,10 @@ public class StoryPage10 extends AppCompatActivity {
     private int itemVisibilityKeyMKA = View.INVISIBLE;
     private int itemVisibilityKeyJK = View.INVISIBLE;
 
-    final String ringKosmova = "kosmova";
-    final String ringBea = "bea";
-    final String ringKobka = "kobka";
+    final String doorbellKosmova = "kosmova";
+    final String doorbellBea = "bea";
+    final String doorbellSfinx = "sfinx";
+    final String doorbellKobka = "kobka";
 
     final String tsNumber  = "689";
     final List<String> possibleMorseAnswers = Arrays.asList("lbd", "kruzok", "krúžok", "krouzek", "kroužek", "kolecko", "kolečko", "o", "koliecko", "koliečko", "koliesko", "circle");
@@ -88,17 +89,20 @@ public class StoryPage10 extends AppCompatActivity {
         activeQuestsKK.add(QuestLineKK3.newInstance());
         activeQuestPageKK = activeQuestsKK.get(0);
 
+        activeQuestsMM.add(QuestLineMM0.newInstance());
         activeQuestsMM.add(QuestLineMM1.newInstance());
         activeQuestsMM.add(QuestLineMM2.newInstance());
         activeQuestsMM.add(QuestLineMM3.newInstance());
         activeQuestsMM.add(QuestLineMM4.newInstance());
         activeQuestPageMM = activeQuestsMM.get(0);
 
+        activeQuestsMKA.add(QuestLineMKA0.newInstance());
         activeQuestsMKA.add(QuestLineMKA1.newInstance());
         activeQuestsMKA.add(QuestLineMKA2.newInstance());
         activeQuestsMKA.add(QuestLineMKA3.newInstance());
         activeQuestPageMKA = activeQuestsMKA.get(0);
 
+        activeQuestsJK.add(QuestLineJK0.newInstance());
         activeQuestsJK.add(QuestLineJK1.newInstance());
         activeQuestsJK.add(QuestLineJK2.newInstance());
         activeQuestsJK.add(QuestLineJK3.newInstance());
@@ -166,9 +170,9 @@ public class StoryPage10 extends AppCompatActivity {
 
     //-----begin-----ring-----
 
-    public void checkRingTextFieldAndGoToNextQuestPageLBD(View view) {
-        final EditText ringTextField = (EditText) findViewById(R.id.ringEditTextFieldLBD0);
-        if (ringTextField.getText().toString().toLowerCase().equals(ringKosmova)) {
+    public void checkDoorbellTextFieldAndGoToNextQuestPageLBD(View view) {
+        final EditText doorbellTextField = (EditText) findViewById(R.id.doorbellEditTextFieldLBD0);
+        if (doorbellTextField.getText().toString().toLowerCase().equals(doorbellKosmova)) {
             goToNextQuestPageLBD(view);
         }
     }
@@ -289,6 +293,17 @@ public class StoryPage10 extends AppCompatActivity {
         updateQuestLineMM(view);
     }
 
+    //-----begin-----ring-----
+
+    public void checkDoorbellTextFieldAndGoToNextQuestPageMM(View view) {
+        final EditText doorbellTextField = (EditText) findViewById(R.id.doorbellEditTextFieldMM0);
+        if (doorbellTextField.getText().toString().toLowerCase().equals(doorbellBea)) {
+            goToNextQuestPageMM(view);
+        }
+    }
+
+    //-----end-----ring-----
+
     //-----end-----MM-----
 
     //-----begin-----MKA-----
@@ -306,6 +321,17 @@ public class StoryPage10 extends AppCompatActivity {
         updateQuestLineMKA(view);
     }
 
+    //-----begin-----ring-----
+
+    public void checkDoorbellTextFieldAndGoToNextQuestPageMKA(View view) {
+        final EditText doorbellTextField = (EditText) findViewById(R.id.doorbellEditTextFieldMKA0);
+        if (doorbellTextField.getText().toString().toLowerCase().equals(doorbellSfinx)) {
+            goToNextQuestPageMKA(view);
+        }
+    }
+
+    //-----end-----ring-----
+
     //-----end-----MKA-----
 
     //-----begin-----JK quest line-----
@@ -319,6 +345,17 @@ public class StoryPage10 extends AppCompatActivity {
         activeQuestPageJK = activeQuestsJK.get(iteratorActiveQuestPageJK);
         updateQuestLineJK(view);
     }
+
+    //-----begin-----ring-----
+
+    public void checkDoorbellTextFieldAndGoToNextQuestPageJK(View view) {
+        final EditText doorbellTextField = (EditText) findViewById(R.id.doorbellEditTextFieldJK0);
+        if (doorbellTextField.getText().toString().toLowerCase().equals(doorbellKobka)) {
+            goToNextQuestPageJK(view);
+        }
+    }
+
+    //-----end-----ring-----
 
     public void checkCodeAndGoToNextQuestPageJK(View view) {
         final EditText addItemTextField = (EditText) findViewById(R.id.codeEditTextField);

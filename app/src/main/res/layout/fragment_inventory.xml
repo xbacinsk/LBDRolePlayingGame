@@ -10,7 +10,7 @@
         android:id="@+id/myTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anytime you find something, you can add it to your inventory using its item code (and take the real one!!!). \nYou can use an item by tapping it."
+        android:text="Anytime you find something, you can add it to your inventory using its item code (and take the real thing!!!). \nYou can use an item by tapping it."
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,7 +21,7 @@
     <EditText
         android:id="@+id/addItemTextField"
         android:inputType="text"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -114,6 +114,5 @@
         android:onClick="useKeyJK"
         android:visibility="invisible"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

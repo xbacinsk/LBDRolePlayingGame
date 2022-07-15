@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuestLineLBD0">
+    tools:context=".QuestLineMM0">
 
     <TextView
-        android:id="@+id/textViewFragmentLBD0"
+        android:id="@+id/textViewFragmentMM0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LBD hľadaj pri Semilasse, na adrese Kosmova 4. \n\nPre kontrolu, že si na správnom mieste, opíš do políčka meno z tretieho zvonku zhora v ľavom stĺpci."
+        android:text="MM hladaj tam a tam. \n\nPre kontrolu, že si na správnom mieste, opíš do políčka meno z tretieho zvonku zhora v ľavom stĺpci."
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,26 +20,26 @@
         />
 
     <EditText
-        android:id="@+id/doorbellEditTextFieldLBD0"
+        android:id="@+id/doorbellEditTextFieldMM0"
         android:inputType="text"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewFragmentLBD0"
+        app:layout_constraintTop_toBottomOf="@id/textViewFragmentMM0"
         android:shadowColor="@color/black"
         android:hint="Name"
         />
 
     <Button
-        android:id="@+id/buttonToNQ0LBD"
+        android:id="@+id/buttonToNQ0MM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
-        app:layout_constraintTop_toBottomOf="@id/doorbellEditTextFieldLBD0"
+        app:layout_constraintTop_toBottomOf="@id/doorbellEditTextFieldMM0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:onClick="checkDoorbellTextFieldAndGoToNextQuestPageLBD"
+        android:onClick="checkDoorbellTextFieldAndGoToNextQuestPageMM"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
