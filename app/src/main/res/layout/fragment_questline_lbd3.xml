@@ -10,7 +10,7 @@
         android:id="@+id/textViewFragmentLBD3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Už vieš čím, ale ešte nevieš, kam. Odvez sa jednu zastávku smerom na Hlavní nádraží. Samozrejme od miesta zakresleneho na mape.\n\nAaaach, a tu sú deravé schody nahoru. A koľko?"
+        android:text="Už vieš čím, ale ešte nevieš, kam. Odvez sa jednu zastávku smerom na Hlavní nádraží. Samozrejme od miesta zakresleného na mape.\n\nAaaach, a tu sú deravé schody nahoru. A koľko?"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/stairsEditTextFieldLBD1"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -19,21 +19,12 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/textViewLegenda3"
+        app:layout_constraintBottom_toTopOf="@id/buttonToNQPMKA3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewFragmentMKA3"
         android:scaleType="centerInside"
-        android:src="@drawable/krizovka1" />
-
-    <TextView
-        android:id="@+id/textViewLegenda3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1. Blah\n2. Sec\n3. Eeee\n4. Hlakjf\n5. Jksfn\n6.\n7.\n8."
-        android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/buttonToNQPMKA3" />
+        android:src="@drawable/mka_third" />
 
     <Button
         android:id="@+id/buttonToNQPMKA3"

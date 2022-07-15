@@ -37,6 +37,9 @@ public class StoryPage10 extends AppCompatActivity {
     final List<String> possibleMorseAnswers = Arrays.asList("lbd", "kruzok", "krúžok", "krouzek", "kroužek", "kolecko", "kolečko", "o", "koliecko", "koliečko", "koliesko", "circle");
     final String pianoCode = "abcd1234";
 
+    private int iteratorActivePhotoMMM = 0;
+    private List<Integer> activePhotosMMM = new ArrayList();
+
     private List<Fragment> activeQuestsMMM = new ArrayList<>();
     private Fragment activeQuestPageMMM;
     private int iteratorActiveQuestPageMMM = 0;
@@ -68,12 +71,22 @@ public class StoryPage10 extends AppCompatActivity {
 
         activeQuestsMMM.add(QuestLineMMM1.newInstance());
         activeQuestsMMM.add(QuestLineMMM2.newInstance());
-        activeQuestsMMM.add(QuestLineMMM3.newInstance());
-        activeQuestsMMM.add(QuestLineMMM4.newInstance());
-        activeQuestsMMM.add(QuestLineMMM5.newInstance());
-        activeQuestsMMM.add(QuestLineMMM6.newInstance());
-        activeQuestsMMM.add(QuestLineMMM7.newInstance());
         activeQuestPageMMM = activeQuestsMMM.get(0);
+
+        activePhotosMMM.add(R.drawable.mmm02);
+        activePhotosMMM.add(R.drawable.mmm03);
+        activePhotosMMM.add(R.drawable.mmm04);
+        activePhotosMMM.add(R.drawable.mmm05);
+        activePhotosMMM.add(R.drawable.mmm06);
+        activePhotosMMM.add(R.drawable.mmm07);
+        activePhotosMMM.add(R.drawable.mmm08);
+        activePhotosMMM.add(R.drawable.mmm09);
+        activePhotosMMM.add(R.drawable.mmm10);
+        activePhotosMMM.add(R.drawable.mmm11);
+        activePhotosMMM.add(R.drawable.mmm12);
+        activePhotosMMM.add(R.drawable.mmm13);
+        activePhotosMMM.add(R.drawable.mmm14);
+        activePhotosMMM.add(R.drawable.mmm15);
 
         activeQuestsLBD.add(QuestLineLBD0.newInstance());
         activeQuestsLBD.add(QuestLineLBD1.newInstance());
@@ -148,10 +161,19 @@ public class StoryPage10 extends AppCompatActivity {
     public void goToNextQuestPageMMM(View view) {
         iteratorActiveQuestPageMMM++;
         if(iteratorActiveQuestPageMMM == activeQuestsMMM.size()) {
-            iteratorActiveQuestPageMMM = 1;
+            iteratorActiveQuestPageMMM = 0;
         }
         activeQuestPageMMM = activeQuestsMMM.get(iteratorActiveQuestPageMMM);
         updateQuestLineMMM(view);
+    }
+
+    public void showNextPhotoMMM(View view) {
+        iteratorActivePhotoMMM++;
+        if(iteratorActivePhotoMMM == activePhotosMMM.size()) {
+            iteratorActivePhotoMMM = 0;
+        }
+        final ImageView imageViewPhotoMMM = (ImageView) findViewById(R.id.imagePhotoMMM);
+        imageViewPhotoMMM.setImageResource(activePhotosMMM.get(iteratorActivePhotoMMM));
     }
 
     //-----end-----MMM-----
@@ -270,7 +292,7 @@ public class StoryPage10 extends AppCompatActivity {
     public void goToNextQuestPageKK(View view) {
         iteratorActiveQuestPageKK++;
         if(iteratorActiveQuestPageKK == activeQuestsKK.size()) {
-            iteratorActiveQuestPageKK = 1;
+            iteratorActiveQuestPageKK = 0;
         }
         activeQuestPageKK = activeQuestsKK.get(iteratorActiveQuestPageKK);
         updateQuestLineKK(view);
@@ -315,7 +337,7 @@ public class StoryPage10 extends AppCompatActivity {
     public void goToNextQuestPageMKA(View view) {
         iteratorActiveQuestPageMKA++;
         if(iteratorActiveQuestPageMKA == activeQuestsMKA.size()) {
-            iteratorActiveQuestPageMKA = 0;
+            iteratorActiveQuestPageMKA = 1;
         }
         activeQuestPageMKA = activeQuestsMKA.get(iteratorActiveQuestPageMKA);
         updateQuestLineMKA(view);
