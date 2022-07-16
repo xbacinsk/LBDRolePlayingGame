@@ -21,7 +21,7 @@
         android:id="@+id/textViewFragmentJK2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="https://ulozto.sk/file/966tGxZGFPfB/bluemoon-mp4"
+        android:text="https://ulozto.sk/file/966tGxZGFPfB/play-me-mp4"
         android:textSize="25dp"
         android:gravity="center"
         app:layout_constraintLeft_toLeftOf="parent"
