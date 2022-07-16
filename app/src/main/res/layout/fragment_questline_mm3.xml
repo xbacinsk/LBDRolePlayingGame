@@ -6,17 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".QuestLineMM3">
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textViewFragmentMM1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posledná hra
+Začína Loyal Servant of Arthur. Pri rozstrele padá červená. LSA sa naprahne zas a triafa nielen oranžovú, ale aj súperovu modrú. 'Ďakujem,' usmeje sa MM a triafa žltú. Inú však netriafa, a tak jej ťah končí. LSA trafí modrú a vzápätí aj žltú. 'Pásikavé vždy vyhrajú,' vyhlási spokojne. Je to 4:2, ak chce MM vyhrať, musí zabrať. Zelená je pred kapsou, tá by sa jej mohla podariť. A veru aj podarí, po nej ešte trafí červenú a vyrovnáva 4:4. LSA triafa fialovú, MM ju trafí tiež a hneď po nej aj hnedú. Chýba jej posledná guľa a potom ostáva len čierna. Víťazstvo sa blíži. LSA triafa len jednu, hnedú, takže situácia je opäť vyrovnaná a MM je na ťahu. Naprahne sa na oranžovú a …. minie ju. Nervózne sa pozrie na LSA, ten sa len uškľabí a sleduje stôl. Po chvíľke premýšľania a premeriavania stola sa napriaha a posledná zelená putuje do kapsy, následovaná o chvíľku aj víťaznou čiernou. 'Hovoril som, vždy vyhrajú,' víťazoslávne sa škerí LSA. 'Poďme znovu, odveta, tentokrát vyhrám!' zahlási MM a už zbiera a zarovnáva gule. Podľa ich interného pravidla 'vždy začína ten, kto vyhral', sa LSA opäť naprahne ako prvý a triafa hnedú celú. 'Takže pásikavé vyhrajú, vravíš,' škodoradostne vyhlási MM. Tým však ťah LSA nekončí. Podarí sa mu ešte trafiť oranžovú a modrú. MM sa ani nedostala na ťah a už prehráva 3:0. Nervozita z nej priam sála. Pristúpi k stolu, zvažuje, ktorý ťah je najlepší a rozhodne sa vyskúšať dvojitý odraz, ktorým (ak bude úspešný), zhodi dve gule naraz. Naprahne sa, ťuká do bielej, ale uhol jej nevychádza a miesto dvoch svojich gulí triafa žltú guľu LSA! 'Ja už s tebou nehrám!!!' nahnevane hádže MM tágo na stôl a odchádza…. "
+        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerInside"
-        android:src="@drawable/mm3" />
+        app:layout_constraintBottom_toTopOf="@id/buttonToNQPMM3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/buttonToNQPMM3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next page in this Quest Line"

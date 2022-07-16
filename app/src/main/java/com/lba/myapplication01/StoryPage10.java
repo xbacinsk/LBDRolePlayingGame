@@ -1,5 +1,6 @@
 package com.lba.myapplication01;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -63,6 +64,13 @@ public class StoryPage10 extends AppCompatActivity {
     private List<Fragment> activeQuestsJK = new ArrayList<>();
     private Fragment activeQuestPageJK;
     private int iteratorActiveQuestPageJK = 0;
+
+    private boolean qlCompletedMMM = false;
+    private boolean qlCompletedLBD = false;
+    private boolean qlCompletedKK = false;
+    private boolean qlCompletedMM = false;
+    private boolean qlCompletedMKA = false;
+    private boolean qlCompletedJK = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -190,7 +198,7 @@ public class StoryPage10 extends AppCompatActivity {
         updateQuestLineLBD(view);
     }
 
-    //-----begin-----ring-----
+    //-----begin-----doorbell-----
 
     public void checkDoorbellTextFieldAndGoToNextQuestPageLBD(View view) {
         final EditText doorbellTextField = (EditText) findViewById(R.id.doorbellEditTextFieldLBD0);
@@ -199,7 +207,7 @@ public class StoryPage10 extends AppCompatActivity {
         }
     }
 
-    //-----end-----ring-----
+    //-----end-----doorbell-----
 
     //-----begin-----hriste-----
 
@@ -309,13 +317,13 @@ public class StoryPage10 extends AppCompatActivity {
     public void goToNextQuestPageMM(View view) {
         iteratorActiveQuestPageMM++;
         if(iteratorActiveQuestPageMM == activeQuestsMM.size()) {
-            iteratorActiveQuestPageMM = 1;
+            iteratorActiveQuestPageMM = 2;
         }
         activeQuestPageMM = activeQuestsMM.get(iteratorActiveQuestPageMM);
         updateQuestLineMM(view);
     }
 
-    //-----begin-----ring-----
+    //-----begin-----doorbell-----
 
     public void checkDoorbellTextFieldAndGoToNextQuestPageMM(View view) {
         final EditText doorbellTextField = (EditText) findViewById(R.id.doorbellEditTextFieldMM0);
@@ -324,7 +332,7 @@ public class StoryPage10 extends AppCompatActivity {
         }
     }
 
-    //-----end-----ring-----
+    //-----end-----doorbell-----
 
     //-----end-----MM-----
 
@@ -343,7 +351,7 @@ public class StoryPage10 extends AppCompatActivity {
         updateQuestLineMKA(view);
     }
 
-    //-----begin-----ring-----
+    //-----begin-----doorbell-----
 
     public void checkDoorbellTextFieldAndGoToNextQuestPageMKA(View view) {
         final EditText doorbellTextField = (EditText) findViewById(R.id.doorbellEditTextFieldMKA0);
@@ -352,7 +360,7 @@ public class StoryPage10 extends AppCompatActivity {
         }
     }
 
-    //-----end-----ring-----
+    //-----end----doorbell-----
 
     //-----end-----MKA-----
 
@@ -368,7 +376,7 @@ public class StoryPage10 extends AppCompatActivity {
         updateQuestLineJK(view);
     }
 
-    //-----begin-----ring-----
+    //-----begin-----doorbell-----
 
     public void checkDoorbellTextFieldAndGoToNextQuestPageJK(View view) {
         final EditText doorbellTextField = (EditText) findViewById(R.id.doorbellEditTextFieldJK0);
@@ -377,7 +385,7 @@ public class StoryPage10 extends AppCompatActivity {
         }
     }
 
-    //-----end-----ring-----
+    //-----end-----doorbell-----
 
     public void checkCodeAndGoToNextQuestPageJK(View view) {
         final EditText addItemTextField = (EditText) findViewById(R.id.codeEditTextField);
@@ -455,38 +463,77 @@ public class StoryPage10 extends AppCompatActivity {
     }
 
     public void useKeyMMM(View view) {
-        activeQuestPageMMM = QuestLineLast.newInstance();
-        showQuestLineMMM(view);
+        qlCompletedMMM = true;
+        if(checkMissionComplete()) {
+            showMissionCompletedPage(view);
+        } else {
+            activeQuestPageMMM = QuestLineLast.newInstance();
+            showQuestLineMMM(view);
+        }
     }
 
     public void useKeyLBD(View view) {
-        activeQuestPageLBD = QuestLineLast.newInstance();
-        showQuestLineLBD(view);
+        qlCompletedLBD = true;
+        if(checkMissionComplete()) {
+            showMissionCompletedPage(view);
+        } else {
+            activeQuestPageLBD = QuestLineLast.newInstance();
+            showQuestLineLBD(view);
+        }
     }
 
     public void useKeyKK(View view) {
-        activeQuestPageKK = QuestLineLast.newInstance();
-        showQuestLineKK(view);
+        qlCompletedKK = true;
+        if(checkMissionComplete()) {
+            showMissionCompletedPage(view);
+        } else {
+            activeQuestPageKK = QuestLineLast.newInstance();
+            showQuestLineKK(view);
+        }
     }
 
     public void useKeyMM(View view) {
-        activeQuestPageMM = QuestLineLast.newInstance();
-        showQuestLineMM(view);
+        qlCompletedMM = true;
+        if(checkMissionComplete()) {
+            showMissionCompletedPage(view);
+        } else {
+            activeQuestPageMM = QuestLineLast.newInstance();
+            showQuestLineMM(view);
+        }
     }
 
     public void useKeyMKA(View view) {
-        activeQuestPageMKA = QuestLineLast.newInstance();
-        showQuestLineMKA(view);
+        qlCompletedMKA = true;
+        if(checkMissionComplete()) {
+            showMissionCompletedPage(view);
+        } else {
+            activeQuestPageMKA = QuestLineLast.newInstance();
+            showQuestLineMKA(view);
+        }
     }
 
     public void useKeyJK(View view) {
-        activeQuestPageJK = QuestLineLast.newInstance();
-        showQuestLineJK(view);
+        qlCompletedJK = true;
+        if(checkMissionComplete()) {
+            showMissionCompletedPage(view);
+        } else {
+            activeQuestPageJK = QuestLineLast.newInstance();
+            showQuestLineJK(view);
+        }
+    }
+
+    private boolean checkMissionComplete() {
+        return qlCompletedMMM && qlCompletedLBD && qlCompletedKK && qlCompletedMM && qlCompletedMKA && qlCompletedJK;
     }
 
     //-----end-----Inventory-----
 
     public void endForNow(View view) {
+    }
+
+    public void showMissionCompletedPage(View view) {
+        Intent intent = new Intent(this, MissionCompleted.class);
+        startActivity(intent);
     }
 }
 

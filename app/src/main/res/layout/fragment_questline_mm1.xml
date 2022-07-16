@@ -10,10 +10,11 @@
         android:id="@+id/textViewFragmentMM1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MMM: 'MM už v Brne nie je, ale jej sestra tu býva a niekedy ju navštevuje. Tá by mohla niečo bližšie vedieť. Ja viem len, že vždy veľmi rada cestovala. A mala rada mapy. Často si do nich niečo zakresľovala, napríklad rôzne symboly. Asi najradšej mala symbol z Moravského námestia.'"
+        android:text="BM: 'Ahoj. MM tu nie je, je na cestách. Odjakživa veľmi rada cestovala. A mala rada mapy. Často si do nich niečo zakresľovala, napríklad rôzne symboly.\nKaždopádne, nechala mi tu nejké šifry, skús na ne pozrieť, možno ich nejak využiješ.'"
         android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
