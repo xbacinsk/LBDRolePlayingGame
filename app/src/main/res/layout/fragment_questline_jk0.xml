@@ -10,7 +10,7 @@
         android:id="@+id/textViewFragmentJK0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="JK hladaj tam a tam. \n\nPre kontrolu, že si na správnom mieste, opíš do políčka meno z tretieho zvonku zhora v ľavom stĺpci."
+        android:text="Pre kontrolu, že si na správnom mieste, opíš do políčka meno z tretieho zvonku zhora v ľavom stĺpci."
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +32,7 @@
         />
 
     <Button
-        android:id="@+id/buttonToNQ0JK"
+        android:id="@+id/buttonToNQPJK0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"

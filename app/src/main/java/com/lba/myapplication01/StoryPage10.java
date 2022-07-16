@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -17,10 +18,10 @@ public class StoryPage10 extends AppCompatActivity {
 
     final String itemCodeKeyMMM = "mmm123";
     final String itemCodeKeyLBD = "lbd123";
-    final String itemCodeKeyKK  = "kk123";
-    final String itemCodeKeyMM  = "mm123";
+    final String itemCodeKeyKK = "kk123";
+    final String itemCodeKeyMM = "mm123";
     final String itemCodeKeyMKA = "mka123";
-    final String itemCodeKeyJK  = "jk123";
+    final String itemCodeKeyJK = "jk123";
 
     private int itemVisibilityKeyMMM = View.INVISIBLE;
     private int itemVisibilityKeyLBD = View.INVISIBLE;
@@ -34,7 +35,7 @@ public class StoryPage10 extends AppCompatActivity {
     final String doorbellSfinx = "sfinx";
     final String doorbellKobka = "kobka";
 
-    final String tsNumber  = "689";
+    final String tsNumber = "689";
     final List<String> possibleMorseAnswers = Arrays.asList("lbd", "kruzok", "krúžok", "krouzek", "kroužek", "kolecko", "kolečko", "o", "koliecko", "koliečko", "koliesko", "circle");
     final String pianoCode = "abcd1234";
 
@@ -126,7 +127,6 @@ public class StoryPage10 extends AppCompatActivity {
         activeQuestsJK.add(QuestLineJK0.newInstance());
         activeQuestsJK.add(QuestLineJK1.newInstance());
         activeQuestsJK.add(QuestLineJK2.newInstance());
-        activeQuestsJK.add(QuestLineJK3.newInstance());
         activeQuestPageJK = activeQuestsJK.get(0);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutSP10, Rozcestnik.newInstance()).commit();
@@ -387,12 +387,7 @@ public class StoryPage10 extends AppCompatActivity {
 
     //-----end-----doorbell-----
 
-    public void checkCodeAndGoToNextQuestPageJK(View view) {
-        final EditText addItemTextField = (EditText) findViewById(R.id.codeEditTextField);
-        if (addItemTextField.getText().toString().equals(pianoCode)) {
-            goToNextQuestPageJK(view);
-        }
-    }
+
 
     //-----end-----JK quest line-----
 

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -54,7 +56,16 @@ public class QuestLineJK2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_questline_jk2, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_questline_jk2, container, false);
+        ImageView imgQrCodeJK = (ImageView) rootView.findViewById(R.id.qrCodeJK);
+        imgQrCodeJK.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                final TextView urlTextView = (TextView) rootView.findViewById(R.id.textViewFragmentJK2);
+                urlTextView.setVisibility(View.VISIBLE);
+            }
+        });
+
+        return rootView;
     }
 
 
