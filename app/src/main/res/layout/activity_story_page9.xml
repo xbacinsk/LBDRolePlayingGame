@@ -7,30 +7,21 @@
     tools:context=".StoryPage9">
 
     <TextView
-        android:id="@+id/myTextViewSP901"
+        android:id="@+id/myTextViewSP9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Máme ale trochu zviazané ruky a nie je možné, aby sme si kľúče vyzdvihli sami. A tu prichádza rad na teba, Andris. Ja ti poviem moju indíciu. LBD bývajúca na sever odtiaľto ti dá svoju, keď sa za ňou zastavíš. Podobne MKA. MM žije ďaleko odtiaľto, ale občas chodieva navštíviť sestru bývajúcu u červeného mlyna. Keď sa poponáhľaš, možno ju tam stretneš. O JK ale bohužiaľ už dlho nič nevieme. Predpokladáme, že už pravdepodobne ani nežije."
+        android:text="Máme ale trochu zviazané ruky a nie je možné, aby sme si kľúče vyzdvihli sami. A tu prichádza rad na teba, Andris. Ja ti poviem moju indíciu. LBD bývajúca na sever odtiaľto ti dá svoju, keď sa za ňou zastavíš. Podobne MKA. MM žije ďaleko odtiaľto, ale občas chodieva navštíviť sestru bývajúcu u červeného mlyna. Keď sa poponáhľaš, možno ju tam stretneš. O JK ale bohužiaľ už dlho nič nevieme. Predpokladáme, že už pravdepodobne ani nežije.\n
+        \nIndície a vodítka sme si spravili každý po svojom. Ja mám sériu fotiek, podľa ktorých sa dá dostať na hľadané miesto. U LBD, MM a MKA očakávam nejaké hádanky, šifry alebo krížovky. KK spomínala nejaké citáty z knihy alebo filmu. A ako poznám JK, tá sa na to celé vykašľala a iba svoj kľúč ukryla v dome, kde kedysi bývala, alebo v parku pri ňom."
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/myTextViewSP902"
-        android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        />
-
-    <TextView
-        android:id="@+id/myTextViewSP902"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Indície a vodítka sme si spravili každý po svojom. Ja mám sériu fotiek, podľa ktorých sa dá dostať na hľadané miesto. U LBD, MM a MKA očakávam nejaké hádanky, šifry alebo krížovky. KK mi poslala niečo, čo mi znie ako citáty z nejakej knihy alebo filmu. A ako poznám JK, tá sa na to celé vykašľala a iba svoj kľúč ukryla v dome, kde kedysi bývala, alebo v parku pri ňom."
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/myTextViewSP901"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonNextSP9"
         android:layout_marginTop="10dp"
         android:textSize="15dp"
         />
 
     <Button
+        android:id="@+id/buttonNextSP9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next page"

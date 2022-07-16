@@ -10,12 +10,14 @@
         android:id="@+id/myTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vitaj. Poviem ti príbeh.  Boli sme šiesti, spolu študovali, riešili šifry a postupne odhaľovali tajomstvá sveta, tie viac aj tie menej prirodzené. Začali sme si hovoriť 'šestka'.\nPri svojich spoločných potulkách sme objavili niečo, o čom sa nám mohlo dovtedy iba snívať. Vzorku čistej upírej krvi. Podarilo sa nám syntetizovať enzým, ktorý sme si, vo svojej mladíckej dychtivosti, všetci striekli do žíl. Na každého z nás zapôsobil mierne odlišne. Základ sa ale nemení, všetkým nám dodal neskutočnú imunitu voči akýmkoľvek chorobám. A vlastne aj voči starnutiu.\n
-        \nVedeli sme, že nájdenú vzorku nemôžeme nechať len tak niekde ležať, dokázala by spôsobiť pohromu. A tak sme ju veľmi pečlivo ukryli a zamkli piatimi kľúčmi. Ešte aj tie kľúče sme schovali na rôznych miestach a sami sa primäli zabudnúť, kde presne. Vyrobili sme si ale vodítka, aby sme sa ku nim v prípade nutnosti dostať dokázali. Každý vie iba svoje vlastné indície, ostatné nepozná.\n
-        \nNo a v tejto dobe, pri tom, čo sa už dlho deje a ešte dlho diať bude, sme sa zhodli na tom, že je načase pomôcť, keďže tú možnosť  máme."
+        android:text="Vitaj. Poviem ti príbeh.\n
+        \nBoli sme šiesti, spolu študovali, riešili šifry a postupne odhaľovali tajomstvá sveta, viac aj menej prirodzené. Začali sme si hovoriť 'šestka'.\nPri svojich spoločných potulkách sme objavili niečo, o čom sa nám mohlo dovtedy iba snívať. Vzorku čistej upírej krvi. Podarilo sa nám syntetizovať enzým, ktorý sme si, vo svojej mladíckej dychtivosti, všetci striekli do žíl. Na každého z nás zapôsobil mierne odlišne. Základ sa ale nemení, všetkým nám dodal neskutočnú imunitu voči akýmkoľvek chorobám. A vlastne aj voči starnutiu.\n
+        \nVedeli sme, že nájdenú vzorku nemôžeme nechať len tak niekde ležať, dokázala by spôsobiť pohromu. A tak sme ju veľmi starostlivo ukryli a zamkli piatimi kľúčmi. Ešte aj tie kľúče sme schovali na rôznych miestach a sami sa primäli zabudnúť, kde presne. Vyrobili sme si ale vodítka, aby sme sa k nim v prípade nutnosti dostať dokázali. Každý vie iba svoje vlastné indície, ostatné nepozná.\n
+        \nNo a v tejto dobe, pri tom, čo sa už dlho deje a ešte dlho diať bude, sme sa zhodli na tom, že je načase pomôcť, keďže tú možnosť máme."
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonNextSP8"
         android:textSize="15dp"
         />
 

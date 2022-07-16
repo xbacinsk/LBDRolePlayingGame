@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication01">
+        <activity android:name=".MissionCompleted" />
         <activity android:name=".InventoryPage1" />
         <activity android:name=".StoryPage10" />
         <activity android:name=".StoryPage9" />
