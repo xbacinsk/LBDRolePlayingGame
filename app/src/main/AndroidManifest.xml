@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MyApplication01">
         <activity android:name=".MissionCompleted" />
         <activity android:name=".InventoryPage1" />
-        <activity android:name=".StoryPage10" />
+        <activity android:name=".StoryPage10" android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity android:name=".StoryPage9" />
         <activity android:name=".StoryPage8" />
         <activity android:name=".StoryPage7" />

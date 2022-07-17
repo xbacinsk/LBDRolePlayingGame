@@ -131,6 +131,11 @@ public class StoryPage10 extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutSP10, Rozcestnik.newInstance()).commit();
     }
 
+    @Override
+    public void onBackPressed () {
+        //do nothing
+    }
+
     //-----begin-----show proper quest line-----
 
     public void showQuestLineMMM(View view) {

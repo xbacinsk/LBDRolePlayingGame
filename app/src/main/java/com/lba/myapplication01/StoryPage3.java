@@ -41,7 +41,7 @@ public class StoryPage3 extends AppCompatActivity {
     }
 
     public void cooldown(View view) {
-        new CountDownTimer(30000, 1000) {
+        new CountDownTimer(21600000, 1000) {
             final Button myCooldownButton = (Button) findViewById(R.id.cooldownButton);
             public void onTick(long millisUntilFinished) {
                 myCooldownButton.setText("Seconds remaining: " + millisUntilFinished / 1000);
