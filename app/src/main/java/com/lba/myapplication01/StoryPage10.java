@@ -16,12 +16,12 @@ import java.util.List;
 
 public class StoryPage10 extends AppCompatActivity {
 
-    final String itemCodeKeyMMM = "mmm123";
-    final String itemCodeKeyLBD = "lbd123";
-    final String itemCodeKeyKK = "kk123";
-    final String itemCodeKeyMM = "mm123";
-    final String itemCodeKeyMKA = "mka123";
-    final String itemCodeKeyJK = "jk123";
+    final String itemCodeKeyMMM = "2mj31c";
+    final String itemCodeKeyLBD = "p4x639";
+    final String itemCodeKeyKK = "b2mc16";
+    final String itemCodeKeyMM = "w372xh";
+    final String itemCodeKeyMKA = "ajt6c7";
+    final String itemCodeKeyJK = "81p51s";
 
     private int itemVisibilityKeyMMM = View.INVISIBLE;
     private int itemVisibilityKeyLBD = View.INVISIBLE;
@@ -30,14 +30,13 @@ public class StoryPage10 extends AppCompatActivity {
     private int itemVisibilityKeyMKA = View.INVISIBLE;
     private int itemVisibilityKeyJK = View.INVISIBLE;
 
-    final String doorbellKosmova = "kosmova";
-    final String doorbellBea = "bea";
-    final String doorbellSfinx = "sfinx";
-    final String doorbellKobka = "kobka";
+    final String doorbellKosmova = "mitanovi";
+    final String doorbellBea = "petr vorel";
+    final String doorbellSfinx = "slouka";
+    final String doorbellKobka = "lindner";
 
     final String tsNumber = "689";
     final List<String> possibleMorseAnswers = Arrays.asList("lbd", "kruzok", "krúžok", "krouzek", "kroužek", "kolecko", "kolečko", "o", "koliecko", "koliečko", "koliesko", "circle");
-    final String pianoCode = "abcd1234";
 
     private int iteratorActivePhotoMMM = 0;
     private List<Integer> activePhotosMMM = new ArrayList();
